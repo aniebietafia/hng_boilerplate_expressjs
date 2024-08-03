@@ -2,7 +2,6 @@ import { Router } from "express";
 import { UserController } from "../controllers";
 import { authMiddleware } from "../middleware";
 import { multerConfig } from "../config/multer";
-
 const upload = multerConfig.single("profile_pic_url");
 
 const userRoute = Router();
