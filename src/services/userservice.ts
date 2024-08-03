@@ -65,6 +65,7 @@ export class UserService {
 
         const { secure_url } = await cloudinary.uploader.upload(file.path);
         profileUpdates.profile_pic_url = secure_url;
+        
       }
 
       await this.userRepository.update(user.id, userUpdates);
